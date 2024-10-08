@@ -118,19 +118,27 @@ https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-8.0
 ## Comandos utilizados
 
 Add-Migration: Genera una nueva migración basada en los cambios del modelo.
+
 Update-Database: Aplica las migraciones pendientes a la base de datos.
+
 dotnet restore: Restaura los paquetes NuGet necesarios.
+
 dotnet run: Compila y ejecuta la aplicación.
 
 ## How to Install
 
 Clonar el repositorio.
+
 Restaurar los paquetes.
+
 Configurar la cadena de conexión en appsettings.json.
+
 Aplicar migraciones para crear las tablas necesarias en la base de datos.
+
 Ejecutar la aplicación con dotnet run.
 
 ## Video del Proyecto
+
 Para una demostración detallada del proyecto, puedes seguir este video de Youtube:
 
 https://youtu.be/72PgEWywQZE
