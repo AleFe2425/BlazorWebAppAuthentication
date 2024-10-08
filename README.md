@@ -69,7 +69,7 @@ Ve a la ruta `/login` para iniciar sesión. Las credenciales almacenadas en la b
 
 Este archivo define el menú de navegación y utiliza el componente `AuthorizeView` para mostrar las opciones del menú según el rol del usuario.
 
-``razor
+```razor
 <AuthorizeView Roles="Administrator,User">
     <Authorized>
         <NavLink class="nav-link" href="counter">Counter</NavLink>
@@ -82,7 +82,7 @@ Este archivo define el menú de navegación y utiliza el componente `AuthorizeVi
     </Authorized>
 </AuthorizeView>
 
-###  Login.razor
+###  2. **Login.razor**
 
 Este componente gestiona el inicio de sesión del usuario. Utiliza el contexto de la base de datos para validar las credenciales ingresadas.
 
@@ -91,36 +91,36 @@ Este componente gestiona el inicio de sesión del usuario. Utiliza el contexto d
     <InputText @bind-Value="Model.Password" type="password" placeholder="Password" />
 </EditForm>
 
-###  Logout.razor
+###  3. **Logout.razor**
 
 Este componente permite al usuario cerrar sesión y elimina la cookie de autenticación.
 
-###  Counter.razor
+###  4. **Counter.razor**
 
 Ejemplo de página protegida que puede ser accesible tanto por administradores como por usuarios con rol 'User'. Aquí se puede ver el uso de Authorize para proteger el componente.
 
 @attribute [Authorize(Roles = "Administrator,User")]
 
-### Routes.razor
+### 5. **Routes.razor**
 
 Este archivo define las rutas de la aplicación y se asegura de que solo los usuarios autorizados puedan acceder a las páginas protegidas.
 
 <AuthorizeRouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
 
-### Recursos
+## Recursos
 
 https://learn.microsoft.com/en-us/aspnet/core/blazor/security/?view=aspnetcore-6.0
 
 https://learn.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-8.0
 
-### Comandos utilizados
+## Comandos utilizados
 
 Add-Migration: Genera una nueva migración basada en los cambios del modelo.
 Update-Database: Aplica las migraciones pendientes a la base de datos.
 dotnet restore: Restaura los paquetes NuGet necesarios.
 dotnet run: Compila y ejecuta la aplicación.
 
-### How to Install
+## How to Install
 
 Clonar el repositorio.
 Restaurar los paquetes.
@@ -128,7 +128,7 @@ Configurar la cadena de conexión en appsettings.json.
 Aplicar migraciones para crear las tablas necesarias en la base de datos.
 Ejecutar la aplicación con dotnet run.
 
-### Video del Proyecto
+## Video del Proyecto
 Para una demostración detallada del proyecto, puedes seguir este video de Youtube:
 
 https://youtu.be/72PgEWywQZE
