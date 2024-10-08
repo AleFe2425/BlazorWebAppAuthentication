@@ -82,6 +82,8 @@ Este archivo define el menú de navegación y utiliza el componente `AuthorizeVi
     </Authorized>
 </AuthorizeView>
 
+```
+
 ###  2. **Login.razor**
 
 Este componente gestiona el inicio de sesión del usuario. Utiliza el contexto de la base de datos para validar las credenciales ingresadas.
